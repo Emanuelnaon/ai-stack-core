@@ -1,0 +1,51 @@
+Listado de rutas de carpetas para el volumen equipo
+El número de serie del volumen es 00000064 7AA6:F2A3
+D:.
+¦   estructura.txt
+¦   setup-project.ps1
+¦   
++---global
+¦       copilot-instructions.md
+¦       custom-instructions.md
+¦       
++---project-rules
+¦       01-stack-convenciones.md
+¦       02-arquitectura-features.md
+¦       03-supabase-patterns.md
+¦       04-design-tokens.md
+¦       05-naming-conventions.md
+¦       06-estado-global-zustand.md
+¦       
++---skills
+¦       crear-componente-con-tokens.md
+¦       crear-feature.md
+¦       crear-fomulario-validado.md
+¦       crear-query-supabase.md
+¦       mcp-supabase-playwright.md
+¦       skills para analizar.md
+¦       
++---templates
+    ¦   globals.css
+    ¦   middleware.ts
+    ¦   supabase-client-pattern.ts
+    ¦   
+    +---app
+    ¦       error.tsx
+    ¦       not-found.tsx
+    ¦       
+    +---features
+    ¦   +---api
+    ¦   +---components
+    ¦   +---hooks
+    ¦   +---types
+    ¦   +---utils
+    +---lib
+    ¦   +---supabase
+    ¦           middleware.ts.ts
+    ¦           
+    +---store
+    ¦       useBoundStore.ts
+    ¦       
+    +---utils
+            image-optimizer.ts
+            

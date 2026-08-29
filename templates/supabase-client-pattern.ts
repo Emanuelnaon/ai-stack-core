@@ -2,8 +2,8 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import type { Database } from '@/types/supabase';
 
-// Plantilla base para inicializar Supabase en Server Actions y Route Handlers
 export async function createSupabaseServerClient() {
+    // NEXT.JS 15+: cookies() ahora es una Promesa y REQUIERE el await
     const cookieStore = await cookies();
 
     return createServerClient<Database>(
@@ -18,7 +18,7 @@ export async function createSupabaseServerClient() {
                     try {
                         cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options));
                     } catch {
-                        // Se ignora el error de mutación de cookies si se llama desde un Server Component
+                        // Se ignora silenciosamente si se llama desde un Server Component
                     }
                 },
             },

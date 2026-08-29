@@ -34,10 +34,10 @@ if (Test-Path "$SdkPath\skills") {
 
 # 5. Copiar el Enrutador/Instrucciones de Copilot
 Write-Host "Inyectando reglas globales para Copilot..." -ForegroundColor Yellow
-if (Test-Path "$SdkPath\copilot-instructions.md") {
-    Copy-Item -Path "$SdkPath\copilot-instructions.md" -Destination .\.github\ -Force
+if (Test-Path "$SdkPath\global\copilot-instructions.md") {
+    Copy-Item -Path "$SdkPath\global\copilot-instructions.md" -Destination .\.github\ -Force
 } else {
-    Write-Host "Aviso: No se encontró copilot-instructions.md en $SdkPath." -ForegroundColor DarkYellow
+    Write-Host "Aviso: No se encontró copilot-instructions.md en $SdkPath\global." -ForegroundColor DarkYellow
 }
 
 # 5.5. Inyectar Orquestador Maestro Dinámico (AGENTS.md)
@@ -52,7 +52,7 @@ Actúas como un Senior Fullstack Developer & Architect. Tu misión es mantener l
 - **Clientes Supabase:** 
   - Cliente de Servidor: `src/lib/supabase/server.ts`
   - Cliente de Navegador: `src/lib/supabase/client.ts`
-  - Middleware: `src/lib/supabase/middleware.ts`
+  - Middleware: `src/middleware.ts`
 - **Patrones de Diseño:** `src/supabase-client-pattern.ts`
 
 ## 🛠️ Skills Disponibles (Triggers)
